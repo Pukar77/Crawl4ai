@@ -1,8 +1,13 @@
 import asyncio
 import google.generativeai as genai
+from dotenv import load_dotenv
+import os
 
+
+load_dotenv()
+api_key = os.getenv("GEMINI_API_KEY")
 # Configure Gemini API
-genai.configure(api_key="AIzaSyBlgz-Vz9tEs3J8slz_Kw4oZUVOdDHMC_w")
+genai.configure(api_key=api_key)
 
 async def clean_markdown():
     # Load your saved markdown
