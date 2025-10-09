@@ -20,7 +20,7 @@ tables = re.findall(r"<table.*?>.*?</table>", html_content, re.DOTALL)
 print(f"🔍 Found {len(tables)} tables in output.md")
 
 # Use Gemini model
-model = genai.GenerativeModel("gemini-2.5-flash")  # safe fallback
+model = genai.GenerativeModel("gemini-2.5-flash")  
 
 # JSON file to store all tables
 json_file = "output_combined.json"

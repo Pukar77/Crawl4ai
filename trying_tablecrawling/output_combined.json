@@ -1,0 +1,292 @@
+[
+    {
+        "C": "",
+        "D": "",
+        "D - f8": "- వద్ద",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "",
+        "Part Number D Tolerance": "SFU",
+        "Part Number Type": "SFJ"
+    },
+    {
+        "C": "",
+        "D": "",
+        "D - f8": "- వద్ద",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "",
+        "Part Number D Tolerance": "- వద్ద",
+        "Part Number Type": "ZSFJ"
+    },
+    {
+        "C": "",
+        "D": "",
+        "D - f8": "- వద్ద",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "",
+        "Part Number D Tolerance": "SSFU",
+        "Part Number Type": "SSFJ"
+    },
+    {
+        "C": "",
+        "D": "",
+        "D - f8": "- వద్ద",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "",
+        "Part Number D Tolerance": "PSFU",
+        "Part Number Type": "PSFJ"
+    },
+    {
+        "C": "",
+        "D": "",
+        "D - f8": "- వద్ద",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "",
+        "Part Number D Tolerance": "PSSFU",
+        "Part Number Type": "PSSFJ"
+    },
+    {
+        "C": "",
+        "D": "",
+        "D - f8": "- వద్ద",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "",
+        "Part Number D Tolerance": "- వద్ద",
+        "Part Number Type": "RSFJ"
+    },
+    {
+        "C": "",
+        "D": "",
+        "D - f8": "- వద్ద",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "",
+        "Part Number D Tolerance": "- వద్ద",
+        "Part Number Type": "RSSFJ"
+    },
+    {
+        "C": "",
+        "D": "",
+        "D - f8": "PSFG",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "",
+        "Part Number D Tolerance": "- వద్ద",
+        "Part Number Type": "- వద్ద"
+    },
+    {
+        "C": "",
+        "D": "",
+        "D - f8": "PSSFG",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "",
+        "Part Number D Tolerance": "- వద్ద",
+        "Part Number Type": "- వద్ద"
+    },
+    {
+        "C": "",
+        "D": "",
+        "D - f8": "",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "75",
+        "Part Number D Tolerance": "",
+        "Part Number Type": "SFJ20"
+    },
+    {
+        "C": "0.2 or Less",
+        "D": "3",
+        "D - f8": "—",
+        "D - g6": "-0.002",
+        "D - h5": "0",
+        "L - 1 mm Increment": "10–400",
+        "Part Number D Tolerance": "D Tolerance h5",
+        "Part Number Type": "D Tolerance g6"
+    },
+    {
+        "C": "0.2 or Less",
+        "D": "3",
+        "D - f8": "—",
+        "D - g6": "-0.008",
+        "D - h5": "-0.004",
+        "L - 1 mm Increment": "10–400",
+        "Part Number D Tolerance": "SFU",
+        "Part Number Type": "SFJ"
+    },
+    {
+        "C": "0.2 or Less",
+        "D": "4",
+        "D - f8": "—",
+        "D - g6": "-0.004",
+        "D - h5": "0",
+        "L - 1 mm Increment": "10–400",
+        "Part Number D Tolerance": "SSFU",
+        "Part Number Type": "SSFJ"
+    },
+    {
+        "C": "0.2 or Less",
+        "D": "5",
+        "D - f8": "—",
+        "D - g6": "-0.012",
+        "D - h5": "-0.005",
+        "L - 1 mm Increment": "10–400",
+        "Part Number D Tolerance": "PSFU",
+        "Part Number Type": "PSFJ"
+    },
+    {
+        "C": "0.5 or Less",
+        "D": "6",
+        "D - f8": "-0.01",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "15–900",
+        "Part Number D Tolerance": "PSSFU",
+        "Part Number Type": "PSSFJ"
+    },
+    {
+        "C": "0.5 or Less",
+        "D": "6",
+        "D - f8": "-0.028",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "15–900",
+        "Part Number D Tolerance": "",
+        "Part Number Type": "RSFJ (D≦30、L≦500)"
+    },
+    {
+        "C": "0.5 or Less",
+        "D": "8",
+        "D - f8": "-0.013",
+        "D - g6": "-0.005",
+        "D - h5": "0",
+        "L - 1 mm Increment": "15–1100",
+        "Part Number D Tolerance": "",
+        "Part Number Type": "RSSFJ (D≦30、L≦500)"
+    },
+    {
+        "C": "0.5 or Less",
+        "D": "10",
+        "D - f8": "-0.035",
+        "D - g6": "-0.014",
+        "D - h5": "-0.006",
+        "L - 1 mm Increment": "15–1200",
+        "Part Number D Tolerance": "",
+        "Part Number Type": ""
+    },
+    {
+        "C": "0.5 or Less",
+        "D": "12",
+        "D - f8": "-0.016",
+        "D - g6": "-0.006",
+        "D - h5": "0",
+        "L - 1 mm Increment": "15–1400",
+        "Part Number D Tolerance": "",
+        "Part Number Type": ""
+    },
+    {
+        "C": "0.5 or Less",
+        "D": "13",
+        "D - f8": "-0.043",
+        "D - g6": "-0.017",
+        "D - h5": "-0.008",
+        "L - 1 mm Increment": "15–1400",
+        "Part Number D Tolerance": "",
+        "Part Number Type": "D Tolerance f8"
+    },
+    {
+        "C": "0.5 or Less",
+        "D": "15",
+        "D - f8": "",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "15–1400",
+        "Part Number D Tolerance": "",
+        "Part Number Type": "PSFG"
+    },
+    {
+        "C": "0.5 or Less",
+        "D": "16",
+        "D - f8": "",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "30–1400",
+        "Part Number D Tolerance": "",
+        "Part Number Type": "PSSFG"
+    },
+    {
+        "C": "0.5 or Less",
+        "D": "18",
+        "D - f8": "",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "30–1400",
+        "Part Number D Tolerance": "",
+        "Part Number Type": ""
+    },
+    {
+        "C": "1.0 or Less",
+        "D": "20",
+        "D - f8": "-0.020",
+        "D - g6": "-0.007",
+        "D - h5": "0",
+        "L - 1 mm Increment": "30–1400",
+        "Part Number D Tolerance": "",
+        "Part Number Type": ""
+    },
+    {
+        "C": "1.0 or Less",
+        "D": "25",
+        "D - f8": "-0.053",
+        "D - g6": "-0.02",
+        "D - h5": "-0.009",
+        "L - 1 mm Increment": "35–1400",
+        "Part Number D Tolerance": "",
+        "Part Number Type": ""
+    },
+    {
+        "C": "1.0 or Less",
+        "D": "30",
+        "D - f8": "",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "35–1500",
+        "Part Number D Tolerance": "",
+        "Part Number Type": ""
+    },
+    {
+        "C": "1.0 or Less",
+        "D": "35",
+        "D - f8": "-0.025",
+        "D - g6": "-0.009",
+        "D - h5": "0",
+        "L - 1 mm Increment": "35–1500",
+        "Part Number D Tolerance": "",
+        "Part Number Type": ""
+    },
+    {
+        "C": "1.0 or Less",
+        "D": "40",
+        "D - f8": "-0.064",
+        "D - g6": "-0.025",
+        "D - h5": "-0.011",
+        "L - 1 mm Increment": "50–1500",
+        "Part Number D Tolerance": "",
+        "Part Number Type": ""
+    },
+    {
+        "C": "1.0 or Less",
+        "D": "50",
+        "D - f8": "",
+        "D - g6": "",
+        "D - h5": "",
+        "L - 1 mm Increment": "65–1500",
+        "Part Number D Tolerance": "",
+        "Part Number Type": ""
+    }
+]
