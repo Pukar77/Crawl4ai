@@ -1,4 +1,5 @@
 import google.generativeai as genai
+from google.generativeai.types import Part # Import Part for multimodal content
 import pandas as pd
 import json
 import re
@@ -6,6 +7,7 @@ from dotenv import load_dotenv
 import os
 import html
 from bs4 import BeautifulSoup
+from PIL import Image # Library for image processing
 
 # Load API key
 load_dotenv()
@@ -44,6 +46,19 @@ RESPONSE_SCHEMA = {
 }
 
 # ----------------------------------------------------------------------
+# Helper function to load image
+# ----------------------------------------------------------------------
+def load_image_part(image_path: str) -> Part:
+    """Loads a local image file and converts it into a Google Generative AI Part."""
+    try:
+        img = Image.open(image_path)
+        return img
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Image file not found at path: {image_path}")
+    except Exception as e:
+        raise ValueError(f"Could not load image file: {e}")
+
+# ----------------------------------------------------------------------
 # Main Processing Logic
 # ----------------------------------------------------------------------
 
@@ -58,26 +73,41 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 json_file = "output_combined.json"
 all_json = []
 
+# Load the image once outside the loop
+try:
+    image_part = load_image_part("image.png")
+except Exception as e:
+    # If the image fails to load, we cannot proceed with the requested multimodal task
+    print(f"FATAL ERROR: {e}. Please ensure 'image.png' exists and is readable.")
+    exit(1)
+
+
 for idx, table_html in enumerate(tables, start=1):
-    print(f"📤 Sending Table {idx} to Gemini for structured normalization...")
+    print(f"📤 Sending Table {idx} to Gemini for structured normalization (Multimodal)...")
 
     soup = BeautifulSoup(table_html, 'html.parser')
     table_content = str(soup.find('table') or table_html)
     
-    prompt = f"""
+    prompt_text = f"""
     Convert the following HTML table into a strict JSON array based on the provided schema.
+    
+    **IMPORTANT:** Use the provided IMAGE (image.png) as the ground truth reference for all cell values and merging decisions. The final JSON output must match the visual layout shown in the image exactly, especially for merged cells.
 
     **CRITICAL NORMALIZATION RULES FOR MISUMI DATA:**
-    1.  **Header Mapping:** The output columns must map to the provided schema keys. For example, the column labeled 'D Tolerance g6' should map to 'Part Number Type', and 'D Tolerance h5' should map to 'Part Number D Tolerance'.
-    2.  **Rowspan Filling (Fill Down):** If a cell has a rowspan, its value must be copied down to all rows it covers. For example, 'D Tolerance g6' spans many rows; copy that text to all corresponding rows in the final JSON under 'Part Number Type'.
-    3.  **Specific Cell Groups:** Pay close attention to the columns under 'D', 'D - g6', and 'D - h5':
-        * Rows for D=4, D=5, and D=6 are visually grouped. Ensure that the 'D - g6', 'D - h5', and 'D - f8' values are correctly matched to the 'D' values (4, 5, 6) on the **same HTML row**, regardless of column merging.
-        * If a cell is empty or implicitly merged, use an empty string: "".
+    1.  **Header Mapping:** The output columns must map to the provided schema keys.
+    2.  **Rowspan Filling (Fill Down):** If a cell has a rowspan, its value must be copied down to all rows it covers (referencing the IMAGE for correct span size).
+    3.  **Specific Cell Groups:** Pay close attention to the columns under 'D', 'D - g6', and 'D - h5' (especially rows 4, 5, 6). The image shows exactly how these values are meant to align.
     4.  **Strict Output:** The output MUST be a JSON array of objects conforming exactly to the response schema.
     
     HTML Table:
     {table_content}
     """
+    
+    # Create the multimodal content list
+    content_parts = [
+        image_part,
+        prompt_text
+    ]
 
     try:
         generation_config_dict = {
@@ -86,7 +116,7 @@ for idx, table_html in enumerate(tables, start=1):
         }
         
         response = model.generate_content(
-            prompt,
+            content_parts, # Pass the list of image and text parts
             generation_config=generation_config_dict
         )
         
