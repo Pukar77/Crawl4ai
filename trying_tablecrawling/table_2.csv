@@ -1,22 +1,34 @@
-C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number Type
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance g6,SFJ
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance g6,SSFJ
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance g6,PSFJ
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance g6,PSSFJ
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance g6,RSSFJ (D≤30、L≤500)
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance h5,SFU
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance h5,SSFU
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance h5,PSFU
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance h5,PSSFU
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance f8,PSFG
-0.2 or Less,3,—,-0.002 -0.008,0 -0.004,10-400,D Tolerance f8,PSSFG
+﻿C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number Type
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance g6,SFJ
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance g6,SSFJ
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance g6,PSFJ
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance g6,PSSFJ
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance h5,SFU
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance h5,SSFU
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance h5,PSFU
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance h5,PSSFU
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance f8,PSFG
+0.2 or Less,3,—,-0.002,0,10-400,D Tolerance f8,PSSFG
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance g6,SFJ
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance g6,SSFJ
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance g6,PSFJ
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance g6,PSSFJ
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance h5,SFU
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance h5,SSFU
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance h5,PSFU
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance h5,PSSFU
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance f8,PSFG
+0.2 or Less,3,—,-0.008,-0.004,10-400,D Tolerance f8,PSSFG
 0.2 or Less,4,—,-0.004,0,10-400,D Tolerance g6,SFJ
 0.2 or Less,4,—,-0.004,0,10-400,D Tolerance g6,SSFJ
 0.2 or Less,4,—,-0.004,0,10-400,D Tolerance g6,PSFJ
 0.2 or Less,4,—,-0.004,0,10-400,D Tolerance g6,PSSFJ
-0.2 or Less,4,—,-0.004,0,10-400,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.2 or Less,4,—,-0.004,0,10-400,D Tolerance g6,RSSFJ (D≤30、L≤500)
+0.2 or Less,4,—,-0.004,0,10-400,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.2 or Less,4,—,-0.004,0,10-400,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 0.2 or Less,4,—,-0.004,0,10-400,D Tolerance h5,SFU
 0.2 or Less,4,—,-0.004,0,10-400,D Tolerance h5,SSFU
 0.2 or Less,4,—,-0.004,0,10-400,D Tolerance h5,PSFU
@@ -27,56 +39,68 @@ C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number 
 0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance g6,SSFJ
 0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance g6,PSFJ
 0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance g6,PSSFJ
-0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance g6,RSSFJ (D≤30、L≤500)
+0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance h5,SFU
 0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance h5,SSFU
 0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance h5,PSFU
 0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance h5,PSSFU
 0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance f8,PSFG
 0.2 or Less,5,—,-0.012,-0.005,10-400,D Tolerance f8,PSSFG
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance g6,SFJ
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance g6,SSFJ
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance g6,PSFJ
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance g6,PSSFJ
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance g6,RSSFJ (D≤30、L≤500)
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance h5,SFU
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance h5,SSFU
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance h5,PSFU
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance h5,PSSFU
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance f8,PSFG
-0.5 or Less,6,-0.01 -0.028,,,15-900,D Tolerance f8,PSSFG
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,SFJ
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,SSFJ
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,PSFJ
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,PSSFJ
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,RSSFJ (D≤30、L≤500)
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance h5,SFU
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance h5,SSFU
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance h5,PSFU
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance h5,PSSFU
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance f8,PSFG
-0.5 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance f8,PSSFG
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,SFJ
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,SSFJ
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,PSFJ
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,PSSFJ
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,RSSFJ (D≤30、L≤500)
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance h5,SFU
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance h5,SSFU
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance h5,PSFU
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance h5,PSSFU
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance f8,PSFG
-0.5 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance f8,PSSFG
+0.2 or Less,6,-0.01,,,15-900,D Tolerance g6,SFJ
+0.2 or Less,6,-0.01,,,15-900,D Tolerance g6,SSFJ
+0.2 or Less,6,-0.01,,,15-900,D Tolerance g6,PSFJ
+0.2 or Less,6,-0.01,,,15-900,D Tolerance g6,PSSFJ
+0.2 or Less,6,-0.01,,,15-900,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.2 or Less,6,-0.01,,,15-900,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
+0.2 or Less,6,-0.01,,,15-900,D Tolerance h5,SFU
+0.2 or Less,6,-0.01,,,15-900,D Tolerance h5,SSFU
+0.2 or Less,6,-0.01,,,15-900,D Tolerance h5,PSFU
+0.2 or Less,6,-0.01,,,15-900,D Tolerance h5,PSSFU
+0.2 or Less,6,-0.01,,,15-900,D Tolerance f8,PSFG
+0.2 or Less,6,-0.01,,,15-900,D Tolerance f8,PSSFG
+0.2 or Less,6,-0.028,,,15-900,D Tolerance g6,SFJ
+0.2 or Less,6,-0.028,,,15-900,D Tolerance g6,SSFJ
+0.2 or Less,6,-0.028,,,15-900,D Tolerance g6,PSFJ
+0.2 or Less,6,-0.028,,,15-900,D Tolerance g6,PSSFJ
+0.2 or Less,6,-0.028,,,15-900,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.2 or Less,6,-0.028,,,15-900,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
+0.2 or Less,6,-0.028,,,15-900,D Tolerance h5,SFU
+0.2 or Less,6,-0.028,,,15-900,D Tolerance h5,SSFU
+0.2 or Less,6,-0.028,,,15-900,D Tolerance h5,PSFU
+0.2 or Less,6,-0.028,,,15-900,D Tolerance h5,PSSFU
+0.2 or Less,6,-0.028,,,15-900,D Tolerance f8,PSFG
+0.2 or Less,6,-0.028,,,15-900,D Tolerance f8,PSSFG
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,SFJ
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,SSFJ
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,PSFJ
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,PSSFJ
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance h5,SFU
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance h5,SSFU
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance h5,PSFU
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance h5,PSSFU
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance f8,PSFG
+0.2 or Less,8,-0.013,-0.005,0,15-1100,D Tolerance f8,PSSFG
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,SFJ
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,SSFJ
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,PSFJ
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,PSSFJ
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance h5,SFU
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance h5,SSFU
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance h5,PSFU
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance h5,PSSFU
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance f8,PSFG
+0.2 or Less,10,-0.035,-0.014,-0.006,15-1200,D Tolerance f8,PSSFG
 0.5 or Less,12,-0.016,-0.006,0,15-1400,D Tolerance g6,SFJ
 0.5 or Less,12,-0.016,-0.006,0,15-1400,D Tolerance g6,SSFJ
 0.5 or Less,12,-0.016,-0.006,0,15-1400,D Tolerance g6,PSFJ
 0.5 or Less,12,-0.016,-0.006,0,15-1400,D Tolerance g6,PSSFJ
-0.5 or Less,12,-0.016,-0.006,0,15-1400,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.5 or Less,12,-0.016,-0.006,0,15-1400,D Tolerance g6,RSSFJ (D≤30、L≤500)
+0.5 or Less,12,-0.016,-0.006,0,15-1400,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.5 or Less,12,-0.016,-0.006,0,15-1400,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 0.5 or Less,12,-0.016,-0.006,0,15-1400,D Tolerance h5,SFU
 0.5 or Less,12,-0.016,-0.006,0,15-1400,D Tolerance h5,SSFU
 0.5 or Less,12,-0.016,-0.006,0,15-1400,D Tolerance h5,PSFU
@@ -87,8 +111,8 @@ C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number 
 0.5 or Less,13,-0.043,-0.017,-0.008,15-1400,D Tolerance g6,SSFJ
 0.5 or Less,13,-0.043,-0.017,-0.008,15-1400,D Tolerance g6,PSFJ
 0.5 or Less,13,-0.043,-0.017,-0.008,15-1400,D Tolerance g6,PSSFJ
-0.5 or Less,13,-0.043,-0.017,-0.008,15-1400,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.5 or Less,13,-0.043,-0.017,-0.008,15-1400,D Tolerance g6,RSSFJ (D≤30、L≤500)
+0.5 or Less,13,-0.043,-0.017,-0.008,15-1400,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.5 or Less,13,-0.043,-0.017,-0.008,15-1400,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 0.5 or Less,13,-0.043,-0.017,-0.008,15-1400,D Tolerance h5,SFU
 0.5 or Less,13,-0.043,-0.017,-0.008,15-1400,D Tolerance h5,SSFU
 0.5 or Less,13,-0.043,-0.017,-0.008,15-1400,D Tolerance h5,PSFU
@@ -99,8 +123,8 @@ C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number 
 0.5 or Less,15,,,,15-1400,D Tolerance g6,SSFJ
 0.5 or Less,15,,,,15-1400,D Tolerance g6,PSFJ
 0.5 or Less,15,,,,15-1400,D Tolerance g6,PSSFJ
-0.5 or Less,15,,,,15-1400,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.5 or Less,15,,,,15-1400,D Tolerance g6,RSSFJ (D≤30、L≤500)
+0.5 or Less,15,,,,15-1400,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.5 or Less,15,,,,15-1400,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 0.5 or Less,15,,,,15-1400,D Tolerance h5,SFU
 0.5 or Less,15,,,,15-1400,D Tolerance h5,SSFU
 0.5 or Less,15,,,,15-1400,D Tolerance h5,PSFU
@@ -111,8 +135,8 @@ C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number 
 0.5 or Less,16,,,,30-1400,D Tolerance g6,SSFJ
 0.5 or Less,16,,,,30-1400,D Tolerance g6,PSFJ
 0.5 or Less,16,,,,30-1400,D Tolerance g6,PSSFJ
-0.5 or Less,16,,,,30-1400,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.5 or Less,16,,,,30-1400,D Tolerance g6,RSSFJ (D≤30、L≤500)
+0.5 or Less,16,,,,30-1400,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.5 or Less,16,,,,30-1400,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 0.5 or Less,16,,,,30-1400,D Tolerance h5,SFU
 0.5 or Less,16,,,,30-1400,D Tolerance h5,SSFU
 0.5 or Less,16,,,,30-1400,D Tolerance h5,PSFU
@@ -123,8 +147,8 @@ C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number 
 0.5 or Less,18,,,,30-1400,D Tolerance g6,SSFJ
 0.5 or Less,18,,,,30-1400,D Tolerance g6,PSFJ
 0.5 or Less,18,,,,30-1400,D Tolerance g6,PSSFJ
-0.5 or Less,18,,,,30-1400,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.5 or Less,18,,,,30-1400,D Tolerance g6,RSSFJ (D≤30、L≤500)
+0.5 or Less,18,,,,30-1400,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.5 or Less,18,,,,30-1400,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 0.5 or Less,18,,,,30-1400,D Tolerance h5,SFU
 0.5 or Less,18,,,,30-1400,D Tolerance h5,SSFU
 0.5 or Less,18,,,,30-1400,D Tolerance h5,PSFU
@@ -135,8 +159,8 @@ C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number 
 0.5 or Less,20,-0.020,-0.007,0,30-1400,D Tolerance g6,SSFJ
 0.5 or Less,20,-0.020,-0.007,0,30-1400,D Tolerance g6,PSFJ
 0.5 or Less,20,-0.020,-0.007,0,30-1400,D Tolerance g6,PSSFJ
-0.5 or Less,20,-0.020,-0.007,0,30-1400,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.5 or Less,20,-0.020,-0.007,0,30-1400,D Tolerance g6,RSSFJ (D≤30、L≤500)
+0.5 or Less,20,-0.020,-0.007,0,30-1400,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.5 or Less,20,-0.020,-0.007,0,30-1400,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 0.5 or Less,20,-0.020,-0.007,0,30-1400,D Tolerance h5,SFU
 0.5 or Less,20,-0.020,-0.007,0,30-1400,D Tolerance h5,SSFU
 0.5 or Less,20,-0.020,-0.007,0,30-1400,D Tolerance h5,PSFU
@@ -147,11 +171,11 @@ C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number 
 0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance g6,SSFJ
 0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance g6,PSFJ
 0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance g6,PSSFJ
-0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance g6,RSFJ (D≤30、L≤500)
-0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance g6,RSSFJ (D≤30、L≤500)
+0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance h5,SFU
-0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance h5,SSFU
 0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance h5,PSFU
+0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance h5,SSFU
 0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance h5,PSSFU
 0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance f8,PSFG
 0.5 or Less,25,-0.053,-0.02,-0.009,35-1400,D Tolerance f8,PSSFG
@@ -159,8 +183,8 @@ C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number 
 1.0 or Less,30,,,,35-1500,D Tolerance g6,SSFJ
 1.0 or Less,30,,,,35-1500,D Tolerance g6,PSFJ
 1.0 or Less,30,,,,35-1500,D Tolerance g6,PSSFJ
-1.0 or Less,30,,,,35-1500,D Tolerance g6,RSFJ (D≤30、L≤500)
-1.0 or Less,30,,,,35-1500,D Tolerance g6,RSSFJ (D≤30、L≤500)
+1.0 or Less,30,,,,35-1500,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+1.0 or Less,30,,,,35-1500,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 1.0 or Less,30,,,,35-1500,D Tolerance h5,SFU
 1.0 or Less,30,,,,35-1500,D Tolerance h5,SSFU
 1.0 or Less,30,,,,35-1500,D Tolerance h5,PSFU
@@ -171,8 +195,8 @@ C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number 
 1.0 or Less,35,-0.025,-0.009,0,35-1500,D Tolerance g6,SSFJ
 1.0 or Less,35,-0.025,-0.009,0,35-1500,D Tolerance g6,PSFJ
 1.0 or Less,35,-0.025,-0.009,0,35-1500,D Tolerance g6,PSSFJ
-1.0 or Less,35,-0.025,-0.009,0,35-1500,D Tolerance g6,RSFJ (D≤30、L≤500)
-1.0 or Less,35,-0.025,-0.009,0,35-1500,D Tolerance g6,RSSFJ (D≤30、L≤500)
+1.0 or Less,35,-0.025,-0.009,0,35-1500,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+1.0 or Less,35,-0.025,-0.009,0,35-1500,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 1.0 or Less,35,-0.025,-0.009,0,35-1500,D Tolerance h5,SFU
 1.0 or Less,35,-0.025,-0.009,0,35-1500,D Tolerance h5,SSFU
 1.0 or Less,35,-0.025,-0.009,0,35-1500,D Tolerance h5,PSFU
@@ -183,8 +207,8 @@ C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number 
 1.0 or Less,40,-0.064,-0.025,-0.011,50-1500,D Tolerance g6,SSFJ
 1.0 or Less,40,-0.064,-0.025,-0.011,50-1500,D Tolerance g6,PSFJ
 1.0 or Less,40,-0.064,-0.025,-0.011,50-1500,D Tolerance g6,PSSFJ
-1.0 or Less,40,-0.064,-0.025,-0.011,50-1500,D Tolerance g6,RSFJ (D≤30、L≤500)
-1.0 or Less,40,-0.064,-0.025,-0.011,50-1500,D Tolerance g6,RSSFJ (D≤30、L≤500)
+1.0 or Less,40,-0.064,-0.025,-0.011,50-1500,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+1.0 or Less,40,-0.064,-0.025,-0.011,50-1500,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 1.0 or Less,40,-0.064,-0.025,-0.011,50-1500,D Tolerance h5,SFU
 1.0 or Less,40,-0.064,-0.025,-0.011,50-1500,D Tolerance h5,SSFU
 1.0 or Less,40,-0.064,-0.025,-0.011,50-1500,D Tolerance h5,PSFU
@@ -195,8 +219,8 @@ C,D,D - f8,D - g6,D - h5,L - 1 mm Increment,Part Number D Tolerance,Part Number 
 1.0 or Less,50,,,,65-1500,D Tolerance g6,SSFJ
 1.0 or Less,50,,,,65-1500,D Tolerance g6,PSFJ
 1.0 or Less,50,,,,65-1500,D Tolerance g6,PSSFJ
-1.0 or Less,50,,,,65-1500,D Tolerance g6,RSFJ (D≤30、L≤500)
-1.0 or Less,50,,,,65-1500,D Tolerance g6,RSSFJ (D≤30、L≤500)
+1.0 or Less,50,,,,65-1500,D Tolerance g6,"RSFJ (D≤30, L≤500)"
+1.0 or Less,50,,,,65-1500,D Tolerance g6,"RSSFJ (D≤30, L≤500)"
 1.0 or Less,50,,,,65-1500,D Tolerance h5,SFU
 1.0 or Less,50,,,,65-1500,D Tolerance h5,SSFU
 1.0 or Less,50,,,,65-1500,D Tolerance h5,PSFU

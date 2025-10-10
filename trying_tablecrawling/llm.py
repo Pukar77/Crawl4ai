@@ -1,5 +1,5 @@
 import google.generativeai as genai
-from google.generativeai.types import Part # Import Part for multimodal content
+# Removed: from google.generativeai.types import Part # Import Part for multimodal content
 import pandas as pd
 import json
 import re
@@ -8,6 +8,7 @@ import os
 import html
 from bs4 import BeautifulSoup
 from PIL import Image # Library for image processing
+from PIL.Image import Image as PILImage # Import specific PIL Image type for type hinting
 
 # Load API key
 load_dotenv()
@@ -43,13 +44,14 @@ RESPONSE_SCHEMA = {
             for col in TARGET_COLUMN_SCHEMA
         }
     }
-}
+} 
 
 # ----------------------------------------------------------------------
 # Helper function to load image
 # ----------------------------------------------------------------------
-def load_image_part(image_path: str) -> Part:
-    """Loads a local image file and converts it into a Google Generative AI Part."""
+# FIX: Uses PILImage type hint instead of the problematic 'Part'
+def load_image_part(image_path: str) -> PILImage:
+    """Loads a local image file and returns a PIL Image object."""
     try:
         img = Image.open(image_path)
         return img
@@ -88,15 +90,16 @@ for idx, table_html in enumerate(tables, start=1):
     soup = BeautifulSoup(table_html, 'html.parser')
     table_content = str(soup.find('table') or table_html)
     
+    # RESTORED PROMPT: Removed the "a/b/c" rule.
     prompt_text = f"""
     Convert the following HTML table into a strict JSON array based on the provided schema.
     
     **IMPORTANT:** Use the provided IMAGE (image.png) as the ground truth reference for all cell values and merging decisions. The final JSON output must match the visual layout shown in the image exactly, especially for merged cells.
 
     **CRITICAL NORMALIZATION RULES FOR MISUMI DATA:**
-    1.  **Header Mapping:** The output columns must map to the provided schema keys.
+    1.  **Header Mapping:** The output columns must map exactly to the provided schema keys.
     2.  **Rowspan Filling (Fill Down):** If a cell has a rowspan, its value must be copied down to all rows it covers (referencing the IMAGE for correct span size).
-    3.  **Specific Cell Groups:** Pay close attention to the columns under 'D', 'D - g6', and 'D - h5' (especially rows 4, 5, 6). The image shows exactly how these values are meant to align.
+    3.  **Specific Cell Groups:** Pay close attention to the columns under 'D', 'D - g6', and 'D - h5'. The image shows exactly how these values are meant to align across rows.
     4.  **Strict Output:** The output MUST be a JSON array of objects conforming exactly to the response schema.
     
     HTML Table:
@@ -120,7 +123,7 @@ for idx, table_html in enumerate(tables, start=1):
             generation_config=generation_config_dict
         )
         
-        json_text = response.text.strip()
+        json_text = response.text.strip()  
         data = json.loads(json_text)
 
         # Decode HTML entities
@@ -135,7 +138,8 @@ for idx, table_html in enumerate(tables, start=1):
         # Convert to DataFrame and Save to CSV
         df = pd.DataFrame(data)
         csv_file = f"table_{idx}.csv"
-        df.to_csv(csv_file, index=False, encoding="utf-8")
+        # Using utf-8-sig for better compatibility with Excel/spreadsheet software
+        df.to_csv(csv_file, index=False, encoding="utf-8-sig") 
         print(f"✅ Table {idx} processed and saved as {csv_file}")
 
     except json.JSONDecodeError as e:
