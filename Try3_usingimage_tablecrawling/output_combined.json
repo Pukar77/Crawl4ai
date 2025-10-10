@@ -1,0 +1,196 @@
+[
+  {
+    "table_index": 1,
+    "screenshot": "table_screenshots\\table_1.png",
+    "schema": [
+      "Type Right-Hand Screw",
+      "Type Left-Hand Screw",
+      "[ M ] Material",
+      "[ S ] Surface Treatment"
+    ],
+    "data": [
+      {
+        "Type Right-Hand Screw": "MTWK",
+        "Type Left-Hand Screw": "MTWLK",
+        "[ M ] Material": "1045 Carbon Steel",
+        "[ S ] Surface Treatment": "-"
+      },
+      {
+        "Type Right-Hand Screw": "MTWBK",
+        "Type Left-Hand Screw": "MTWBLK",
+        "[ M ] Material": "1045 Carbon Steel",
+        "[ S ] Surface Treatment": "Black Oxide"
+      },
+      {
+        "Type Right-Hand Screw": "RMTWK",
+        "Type Left-Hand Screw": "RMTWLK",
+        "[ M ] Material": "1045 Carbon Steel",
+        "[ S ] Surface Treatment": "Low Temperature Black Chrome Plating"
+      },
+      {
+        "Type Right-Hand Screw": "MTSWK",
+        "Type Left-Hand Screw": "MTSWLK",
+        "[ M ] Material": "303 Stainless Steel",
+        "[ S ] Surface Treatment": "-"
+      }
+    ]
+  },
+  {
+    "table_index": 2,
+    "screenshot": "table_screenshots\\table_2.png",
+    "schema": [
+      "Part Number",
+      "L",
+      "S"
+    ],
+    "data": [
+      {
+        "Part Number": "MTWK20",
+        "L": "800",
+        "S": "S90"
+      }
+    ]
+  },
+  {
+    "table_index": 3,
+    "screenshot": "table_screenshots\\table_3.png",
+    "schema": [
+      "Right-Hand Screw Type",
+      "Left-Hand Screw Type",
+      "1mm Increment D",
+      "1mm Increment L",
+      "1mm Increment S",
+      "F",
+      "R",
+      "B",
+      "T",
+      "Q",
+      "A",
+      "MxPitch",
+      "E",
+      "D",
+      "Pitch P"
+    ],
+    "data": [
+      {
+        "Right-Hand Screw Type": "(Right-Hand Screw) MTWK MTWBK RMTWK Low Temperature Black Chrome Plated Products MTSWK",
+        "Left-Hand Screw Type": "(Left-Hand Screw) MTWLK MTWBLK RMTWLK L≤1000 MTSWLK",
+        "1mm Increment D": "12",
+        "1mm Increment L": "80~1000",
+        "1mm Increment S": "2≤S≤80",
+        "F": "10",
+        "R": "8",
+        "B": "7",
+        "T": "26",
+        "Q": "8",
+        "A": "11",
+        "MxPitch": "8x1.0",
+        "E": "6",
+        "D": "12",
+        "Pitch P": "2"
+      },
+      {
+        "Right-Hand Screw Type": "(Right-Hand Screw) MTWK MTWBK RMTWK Low Temperature Black Chrome Plated Products MTSWK",
+        "Left-Hand Screw Type": "(Left-Hand Screw) MTWLK MTWBLK RMTWLK L≤1000 MTSWLK",
+        "1mm Increment D": "14",
+        "1mm Increment L": "80~1000",
+        "1mm Increment S": "2≤S≤80",
+        "F": "12",
+        "R": "10",
+        "B": "8",
+        "T": "29",
+        "Q": "10",
+        "A": "12",
+        "MxPitch": "10x1.0",
+        "E": "8",
+        "D": "14",
+        "Pitch P": "3"
+      },
+      {
+        "Right-Hand Screw Type": "(Right-Hand Screw) MTWK MTWBK RMTWK Low Temperature Black Chrome Plated Products MTSWK",
+        "Left-Hand Screw Type": "(Left-Hand Screw) MTWLK MTWBLK RMTWLK L≤1000 MTSWLK",
+        "1mm Increment D": "16",
+        "1mm Increment L": "100~1200",
+        "1mm Increment S": "2≤S≤95",
+        "F": "12",
+        "R": "12",
+        "B": "8",
+        "T": "29",
+        "Q": "12",
+        "A": "12",
+        "MxPitch": "12x1.0",
+        "E": "10",
+        "D": "16",
+        "Pitch P": "3"
+      },
+      {
+        "Right-Hand Screw Type": "(Right-Hand Screw) MTWK MTWBK RMTWK Low Temperature Black Chrome Plated Products MTSWK",
+        "Left-Hand Screw Type": "(Left-Hand Screw) MTWLK MTWBLK RMTWLK L≤1000 MTSWLK",
+        "1mm Increment D": "18",
+        "1mm Increment L": "100~1200",
+        "1mm Increment S": "2≤S≤95",
+        "F": "12",
+        "R": "12",
+        "B": "8",
+        "T": "29",
+        "Q": "12",
+        "A": "12",
+        "MxPitch": "12x1.0",
+        "E": "10",
+        "D": "18",
+        "Pitch P": "4"
+      },
+      {
+        "Right-Hand Screw Type": "(Right-Hand Screw) MTWK MTWBK RMTWK Low Temperature Black Chrome Plated Products MTSWK",
+        "Left-Hand Screw Type": "(Left-Hand Screw) MTWLK MTWBLK RMTWLK L≤1000 MTSWLK",
+        "1mm Increment D": "20",
+        "1mm Increment L": "150~1200",
+        "1mm Increment S": "2≤S≤100",
+        "F": "12",
+        "R": "15",
+        "B": "9",
+        "T": "34",
+        "Q": "15",
+        "A": "14",
+        "MxPitch": "15x1.0",
+        "E": "12",
+        "D": "20",
+        "Pitch P": "4"
+      },
+      {
+        "Right-Hand Screw Type": "(Right-Hand Screw) MTWK MTWBK RMTWK Low Temperature Black Chrome Plated Products MTSWK",
+        "Left-Hand Screw Type": "(Left-Hand Screw) MTWLK MTWBLK RMTWLK L≤1000 MTSWLK",
+        "1mm Increment D": "22",
+        "1mm Increment L": "150~1200",
+        "1mm Increment S": "2≤S≤100",
+        "F": "12",
+        "R": "15",
+        "B": "9",
+        "T": "34",
+        "Q": "15",
+        "A": "14",
+        "MxPitch": "15x1.0",
+        "E": "12",
+        "D": "22",
+        "Pitch P": "5"
+      },
+      {
+        "Right-Hand Screw Type": "(Right-Hand Screw) MTWK MTWBK RMTWK Low Temperature Black Chrome Plated Products MTSWK",
+        "Left-Hand Screw Type": "(Left-Hand Screw) MTWLK MTWBLK RMTWLK L≤1000 MTSWLK",
+        "1mm Increment D": "25",
+        "1mm Increment L": "150~1200",
+        "1mm Increment S": "2≤S≤100",
+        "F": "12",
+        "R": "15",
+        "B": "9",
+        "T": "34",
+        "Q": "15",
+        "A": "14",
+        "MxPitch": "15x1.0",
+        "E": "12",
+        "D": "25",
+        "Pitch P": "5"
+      }
+    ]
+  }
+]

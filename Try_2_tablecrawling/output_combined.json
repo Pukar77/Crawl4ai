@@ -1,0 +1,203 @@
+[
+  {
+    "table_index": 1,
+    "schema": [
+      "Type - Right-Hand Screw",
+      "Type - Left-Hand Screw",
+      "Material",
+      "Surface Treatment"
+    ],
+    "data": [
+      {
+        "Type - Right-Hand Screw": "MTWK",
+        "Type - Left-Hand Screw": "MTWLK",
+        "Material": "1045 Carbon Steel",
+        "Surface Treatment": "-"
+      },
+      {
+        "Type - Right-Hand Screw": "MTWBK",
+        "Type - Left-Hand Screw": "MTWBLK",
+        "Material": "1045 Carbon Steel",
+        "Surface Treatment": "Black Oxide"
+      },
+      {
+        "Type - Right-Hand Screw": "RMTWK",
+        "Type - Left-Hand Screw": "RMTWLK",
+        "Material": "1045 Carbon Steel",
+        "Surface Treatment": "Low Temperature Black Chrome Plating"
+      },
+      {
+        "Type - Right-Hand Screw": "MTSWK",
+        "Type - Left-Hand Screw": "MTSWLK",
+        "Material": "303 Stainless Steel",
+        "Surface Treatment": "-"
+      }
+    ]
+  },
+  {
+    "table_index": 2,
+    "schema": [
+      "Part Number",
+      "—",
+      "L",
+      "S"
+    ],
+    "data": [
+      {
+        "Part Number": "MTWK20",
+        "—": "-",
+        "L": "800",
+        "S": "S90"
+      }
+    ]
+  },
+  {
+    "table_index": 3,
+    "schema": [
+      "Part Number Type",
+      "Part Number D",
+      "1mm Increment L",
+      "1mm Increment S",
+      "F",
+      "R",
+      "B",
+      "T",
+      "Q",
+      "A",
+      "MxPitch",
+      "E",
+      "D",
+      "Pitch P"
+    ],
+    "data": [
+      {
+        "Part Number Type": "(Left-Hand Screw)MTWLKMTWBLKRMTWLKL≤1000MTSWLK",
+        "Part Number D": "12",
+        "1mm Increment L": "80~1000",
+        "1mm Increment S": "2≤S≤80",
+        "F": "10",
+        "R": "8",
+        "B": "7",
+        "T": "26",
+        "Q": "8",
+        "A": "11",
+        "MxPitch": "8x1.0",
+        "E": "6",
+        "D": "12",
+        "Pitch P": "2"
+      },
+      {
+        "Part Number Type": "(Left-Hand Screw)MTWLKMTWBLKRMTWLKL≤1000MTSWLK",
+        "Part Number D": "14",
+        "1mm Increment L": "80~1000",
+        "1mm Increment S": "2≤S≤80",
+        "F": "12",
+        "R": "10",
+        "B": "8",
+        "T": "29",
+        "Q": "10",
+        "A": "12",
+        "MxPitch": "10x1.0",
+        "E": "8",
+        "D": "14",
+        "Pitch P": "3"
+      },
+      {
+        "Part Number Type": "(Left-Hand Screw)MTWLKMTWBLKRMTWLKL≤1000MTSWLK",
+        "Part Number D": "16",
+        "1mm Increment L": "100~1200",
+        "1mm Increment S": "2≤S≤95",
+        "F": "12",
+        "R": "12",
+        "B": "8",
+        "T": "29",
+        "Q": "12",
+        "A": "12",
+        "MxPitch": "12x1.0",
+        "E": "10",
+        "D": "16",
+        "Pitch P": "3"
+      },
+      {
+        "Part Number Type": "(Left-Hand Screw)MTWLKMTWBLKRMTWLKL≤1000MTSWLK",
+        "Part Number D": "18",
+        "1mm Increment L": "150~1200",
+        "1mm Increment S": "2≤S≤95",
+        "F": "12",
+        "R": "12",
+        "B": "8",
+        "T": "29",
+        "Q": "12",
+        "A": "12",
+        "MxPitch": "12x1.0",
+        "E": "10",
+        "D": "18",
+        "Pitch P": "4"
+      },
+      {
+        "Part Number Type": "(Left-Hand Screw)MTWLKMTWBLKRMTWLKL≤1000MTSWLK",
+        "Part Number D": "20",
+        "1mm Increment L": "150~1200",
+        "1mm Increment S": "2≤S≤100",
+        "F": "12",
+        "R": "15",
+        "B": "9",
+        "T": "34",
+        "Q": "15",
+        "A": "14",
+        "MxPitch": "15x1.0",
+        "E": "12",
+        "D": "20",
+        "Pitch P": "4"
+      },
+      {
+        "Part Number Type": "(Left-Hand Screw)MTWLKMTWBLKRMTWLKL≤1000MTSWLK",
+        "Part Number D": "22",
+        "1mm Increment L": "150~1200",
+        "1mm Increment S": "2≤S≤100",
+        "F": "12",
+        "R": "15",
+        "B": "9",
+        "T": "34",
+        "Q": "15",
+        "A": "14",
+        "MxPitch": "15x1.0",
+        "E": "12",
+        "D": "22",
+        "Pitch P": "5"
+      },
+      {
+        "Part Number Type": "[ ! ]D dimension 22 is not available for MTSWK[ ! ]D dimensions 22 and 25 are not available for MTSWLK",
+        "Part Number D": "22",
+        "1mm Increment L": "150~1200",
+        "1mm Increment S": "2≤S≤100",
+        "F": "12",
+        "R": "15",
+        "B": "9",
+        "T": "34",
+        "Q": "15",
+        "A": "14",
+        "MxPitch": "15x1.0",
+        "E": "12",
+        "D": "22",
+        "Pitch P": "5"
+      },
+      {
+        "Part Number Type": "[ ! ]D dimension 22 is not available for MTSWK[ ! ]D dimensions 22 and 25 are not available for MTSWLK",
+        "Part Number D": "25",
+        "1mm Increment L": "150~1200",
+        "1mm Increment S": "2≤S≤100",
+        "F": "12",
+        "R": "15",
+        "B": "9",
+        "T": "34",
+        "Q": "15",
+        "A": "14",
+        "MxPitch": "15x1.0",
+        "E": "12",
+        "D": "25",
+        "Pitch P": "5"
+      }
+    ]
+  }
+]
