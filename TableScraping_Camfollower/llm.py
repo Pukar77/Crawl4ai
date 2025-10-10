@@ -8,7 +8,7 @@ import html
 from bs4 import BeautifulSoup
 from PIL import Image
 from PIL.Image import Image as PILImage
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Tuple
 
 # Load API key
 load_dotenv()
@@ -88,6 +88,62 @@ def normalize_table_with_spans(table_html: str) -> List[List[str]]:
     normalized = [[cell if cell is not None else "" for cell in row] for row in grid]
     
     return normalized
+
+
+def detect_split_tables(tables: List[str], grids: List[List[List[str]]]) -> List[Tuple[int, int]]:
+    """
+    Detect pairs of tables that should be merged horizontally.
+    Returns list of tuples (left_table_idx, right_table_idx).
+    """
+    merge_pairs = []
+    
+    for i in range(len(grids) - 1):
+        grid1 = grids[i]
+        grid2 = grids[i + 1]
+        
+        if not grid1 or not grid2:
+            continue
+        
+        # Check if they have the same number of rows (or very close)
+        row_diff = abs(len(grid1) - len(grid2))
+        
+        # Check if first table has significantly fewer columns (likely the left part)
+        col_count1 = len(grid1[0]) if grid1 else 0
+        col_count2 = len(grid2[0]) if grid2 else 0
+        
+        # Heuristic: Tables should be merged if:
+        # 1. Same or similar row count (within 2 rows difference)
+        # 2. First table has fewer columns (likely split design)
+        if row_diff <= 2 and col_count1 < col_count2:
+            merge_pairs.append((i, i + 1))
+            print(f"  🔗 Detected split tables: Table {i+1} ({len(grid1)}×{col_count1}) + Table {i+2} ({len(grid2)}×{col_count2})")
+    
+    return merge_pairs
+
+
+def merge_table_grids(grid1: List[List[str]], grid2: List[List[str]]) -> List[List[str]]:
+    """
+    Merge two table grids horizontally (side by side).
+    """
+    if not grid1:
+        return grid2
+    if not grid2:
+        return grid1
+    
+    # Use the maximum number of rows
+    max_rows = max(len(grid1), len(grid2))
+    
+    merged = []
+    for row_idx in range(max_rows):
+        # Get rows from both grids, or empty row if index out of bounds
+        row1 = grid1[row_idx] if row_idx < len(grid1) else [""] * len(grid1[0])
+        row2 = grid2[row_idx] if row_idx < len(grid2) else [""] * len(grid2[0])
+        
+        # Concatenate horizontally
+        merged_row = row1 + row2
+        merged.append(merged_row)
+    
+    return merged
 
 
 def extract_schema_with_llm(model, table_html: str, image_part: PILImage = None) -> List[str]:
@@ -271,6 +327,35 @@ def main():
     tables = re.findall(r"<table.*?>.*?</table>", html_content, re.DOTALL)
     print(f"🔍 Found {len(tables)} tables in output.md\n")
 
+    # Step 1: Normalize all tables first
+    print("📐 Normalizing all tables...\n")
+    all_grids = []
+    for idx, table_html in enumerate(tables, start=1):
+        grid = normalize_table_with_spans(table_html)
+        all_grids.append(grid)
+        if grid:
+            print(f"  Table {idx}: {len(grid)} rows × {len(grid[0])} columns")
+    
+    # Step 2: Detect split tables that should be merged
+    print("\n🔍 Detecting split tables...")
+    merge_pairs = detect_split_tables(tables, all_grids)
+    
+    # Create a set of tables to skip (right side of merged pairs)
+    skip_indices = set()
+    merged_tables = {}  # Maps left_idx to merged result
+    
+    for left_idx, right_idx in merge_pairs:
+        skip_indices.add(right_idx)
+        merged_grid = merge_table_grids(all_grids[left_idx], all_grids[right_idx])
+        merged_tables[left_idx] = {
+            'grid': merged_grid,
+            'html': tables[left_idx] + "\n<!-- MERGED WITH -->\n" + tables[right_idx],
+            'original_indices': [left_idx, right_idx]
+        }
+        print(f"  ✓ Will merge Table {left_idx+1} + Table {right_idx+1} → {len(merged_grid)} rows × {len(merged_grid[0])} columns")
+    
+    print()
+    
     all_json = []
     json_file = "output_combined.json"
     
@@ -285,20 +370,33 @@ def main():
     except Exception as e:
         print(f"⚠️ No reference image available ({e})\n")
 
-    for idx, table_html in enumerate(tables, start=1):
-        print(f"{'='*60}")
-        print(f"📊 Processing Table {idx}/{len(tables)}")
-        print(f"{'='*60}")
-        
-        # Step 1: Normalize the table structure
-        print("  Step 1: Normalizing table structure...")
-        normalized_grid = normalize_table_with_spans(table_html)
-        
-        if not normalized_grid:
-            print(f"  ❌ Table {idx} could not be parsed\n")
+    output_table_idx = 1
+    
+    for idx in range(len(tables)):
+        # Skip tables that were merged as the right side
+        if idx in skip_indices:
+            print(f"⏭️  Skipping Table {idx+1} (merged into previous table)\n")
             continue
         
-        print(f"  ✓ Normalized to {len(normalized_grid)} rows × {len(normalized_grid[0])} columns")
+        print(f"{'='*60}")
+        print(f"📊 Processing Table {idx+1} → Output Table {output_table_idx}")
+        print(f"{'='*60}")
+        
+        # Check if this table was merged
+        if idx in merged_tables:
+            merged_info = merged_tables[idx]
+            normalized_grid = merged_info['grid']
+            table_html = merged_info['html']
+            print(f"  🔗 Using merged table (originally Table {idx+1} + Table {idx+2})")
+        else:
+            normalized_grid = all_grids[idx]
+            table_html = tables[idx]
+        
+        if not normalized_grid:
+            print(f"  ❌ Table could not be parsed\n")
+            continue
+        
+        print(f"  ✓ Table size: {len(normalized_grid)} rows × {len(normalized_grid[0])} columns")
         
         # Step 2: Extract schema using LLM
         print("  Step 2: Extracting schema...")
@@ -319,29 +417,33 @@ def main():
                 structured_data = fallback_structured_data(normalized_grid)
         
         if not structured_data:
-            print(f"  ❌ Table {idx} produced no structured data\n")
+            print(f"  ❌ Table produced no structured data\n")
             continue
         
         # Save data
         all_json.append({
-            "table_index": idx,
+            "output_table_index": output_table_idx,
+            "original_table_indices": merged_tables[idx]['original_indices'] if idx in merged_tables else [idx],
+            "merged": idx in merged_tables,
             "schema": list(structured_data[0].keys()) if structured_data else [],
             "data": structured_data
         })
         
         # Save individual CSV
         df = pd.DataFrame(structured_data)
-        csv_file = f"table_{idx}.csv"
+        csv_file = f"table_{output_table_idx}.csv"
         df.to_csv(csv_file, index=False, encoding="utf-8-sig")
         print(f"  ✅ Saved as {csv_file}")
         
         # Debug: Print preview
-        print(f"\n  Preview of Table {idx}:")
+        print(f"\n  Preview of Output Table {output_table_idx}:")
         print(f"  Columns: {list(df.columns)}")
         print(f"  Shape: {df.shape}")
         if len(df) > 0:
             print(f"\n{df.head(3).to_string(index=False)}")
         print()
+        
+        output_table_idx += 1
 
     # Save combined JSON
     with open(json_file, "w", encoding="utf-8") as f_json:
@@ -350,7 +452,9 @@ def main():
     print(f"\n{'='*60}")
     print(f"🎉 Processing complete!")
     print(f"{'='*60}")
-    print(f"  • Processed {len(tables)} tables")
+    print(f"  • Found {len(tables)} original tables")
+    print(f"  • Merged {len(merge_pairs)} table pair(s)")
+    print(f"  • Generated {output_table_idx - 1} output table(s)")
     print(f"  • Total data rows: {sum(len(t['data']) for t in all_json)}")
     print(f"  • Combined JSON: {json_file}")
     print(f"  • Individual CSVs: table_1.csv, table_2.csv, ...")
