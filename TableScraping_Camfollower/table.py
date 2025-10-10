@@ -23,7 +23,7 @@ async def main():
             config=run_conf
         )
 
-        # Extract tables inside <div class="pad_b15">
+        # Extract div with id="listContents"
         with open("output.md", "w", encoding="utf-8") as f:
             for idx, res in enumerate(results):
                 html_content = res.html or res.content_as_text()
@@ -32,25 +32,17 @@ async def main():
 
                 soup = BeautifulSoup(html_content, "html.parser")
                 
-                # Find all divs with class pad_b15
-                divs = soup.find_all("div", class_="pad_b15")
-                if not divs:
-                    f.write(f"# No div.pad_b15 found in page {idx+1}\n")
+                # Find the div with id=listContents
+                div = soup.find("div", id="listContents")
+                if not div:
+                    f.write(f"# No div with id='listContents' found in page {idx+1}\n")
                     continue
 
-                table_count = 0
-                for div in divs:
-                    tables = div.find_all("table")  # no class filtering
-                    for table in tables:
-                        table_count += 1
-                        f.write(f"\n\n# Table {table_count} from page {idx+1}: {res.url}\n\n")
-                        f.write(str(table))
-                        f.write("\n" + "="*80 + "\n")
+                f.write(f"\n\n# Div with id='listContents' from page {idx+1}: {res.url}\n\n")
+                f.write(str(div))
+                f.write("\n" + "="*80 + "\n")
 
-                if table_count == 0:
-                    f.write(f"# No table inside div.pad_b15 found in page {idx+1}\n")
-
-    print("✅ Extracted tables inside div.pad_b15 saved to output.md")
+    print("✅ Extracted div with id='listContents' saved to output.md")
 
 if __name__ == "__main__":
     asyncio.run(main())
