@@ -25,6 +25,13 @@ def add(request:AddRequest):
     result = request.num1+request.num2
     return {"result":result}
 
+@app.post("/add/numbers/sub", response_model=AddResponse)
+def sub(request:AddRequest):
+    result = request.num1-request.num2
+    return {"result":result}
+
+
+
 
     
     
