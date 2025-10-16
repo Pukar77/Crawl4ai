@@ -5,13 +5,13 @@ from crawl4ai.content_scraping_strategy import LXMLWebScrapingStrategy
 
 
 async def main():
-    browser_conf = BrowserConfig(headless=True)
+    browser_conf = BrowserConfig(headless=False)
 
     run_conf = CrawlerRunConfig(
         cache_mode=CacheMode.BYPASS,
         deep_crawl_strategy=BFSDeepCrawlStrategy(
-            max_pages=3,
-            max_depth=1
+            max_pages=5,
+            max_depth=2
         ),
         scraping_strategy=LXMLWebScrapingStrategy(),
         verbose=True
