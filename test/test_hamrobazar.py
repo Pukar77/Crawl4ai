@@ -3,7 +3,7 @@ from unittest.mock import AsyncMock, patch
 import asyncio
 
 
-from Hamrobazar_Scrap.testing import main
+from Hamrobazar_Scrap import testing
 
 @pytest.mark.asyncio
 @patch("Hamrobazar_Scrap.testing.AsyncWebCrawler")  # Mock the crawler class
@@ -18,7 +18,7 @@ async def test_main(mock_crawler_class):
     mock_crawler_class.return_value = mock_crawler
 
     # Run your main function
-    await main()
+    await testing.main()
 
     # Assertions
     mock_crawler.arun.assert_called_once()
