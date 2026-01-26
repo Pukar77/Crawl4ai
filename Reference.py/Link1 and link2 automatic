@@ -1,0 +1,79 @@
+import asyncio
+import json
+import os
+from datetime import datetime
+from bs4 import BeautifulSoup
+from crawl4ai import AsyncWebCrawler
+from crawl4ai.async_configs import BrowserConfig, CrawlerRunConfig
+
+
+MAIN_URL = "https://cite.org.zw/category/news/"
+CSS_SELECTOR = ".entry-title a"
+
+
+async def extract_links(crawler):
+    print("🔍 Extracting article links...")
+
+    result = await crawler.arun(
+        url=MAIN_URL,
+        config=CrawlerRunConfig(
+             cache_mode="bypass",
+            wait_until="domcontentloaded",
+            scroll_delay=0.2,
+            simulate_user=True
+            
+        )
+    )
+
+    soup = BeautifulSoup(result.html, "html.parser")
+    anchors = soup.select(CSS_SELECTOR)
+
+    links = []
+    for i, a in enumerate(anchors, start=1):
+        links.append({
+            "id": i,
+            "title": a.get_text(strip=True),
+            "url": a.get("href"),
+            "scraped_at": datetime.now().isoformat()
+        })
+
+    with open("links.json", "w", encoding="utf-8") as f:
+        json.dump(links, f, indent=2, ensure_ascii=False)
+
+    print(f"✅ Found {len(links)} links")
+    return links
+
+
+async def scrape_article(crawler, article):
+    print(f"📄 Scraping: {article['title'][:50]}...")
+
+    result = await crawler.arun(
+        url=article["url"],
+        config=CrawlerRunConfig()
+    )
+
+
+    os.makedirs("articles", exist_ok=True)
+
+    filename = f"articles/article_{article['id']:03d}.md"
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(f"Title : {article['title']}\n\n")
+        f.write(result.markdown or "")
+
+    print(f"✅ Saved {filename}")
+
+
+async def main():
+    browser_config = BrowserConfig(headless=False)
+
+
+    async with AsyncWebCrawler(config=browser_config) as crawler:
+        links = await extract_links(crawler)
+
+        for article in links:
+            await scrape_article(crawler, article)
+            await asyncio.sleep(1)  # polite crawling
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
