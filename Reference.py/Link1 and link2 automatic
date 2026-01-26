@@ -7,7 +7,7 @@ from crawl4ai import AsyncWebCrawler
 from crawl4ai.async_configs import BrowserConfig, CrawlerRunConfig
 
 
-MAIN_URL = "https://cite.org.zw/category/news/"
+MAIN_URL = "https://anysite.com"
 CSS_SELECTOR = ".entry-title a"
 
 
